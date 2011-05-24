@@ -23,3 +23,21 @@ Rendered pages/home.html.erb within layouts/application (1.0ms)
 Completed 200 OK in 90ms (Views: 90.0ms | ActiveRecord: 0.0ms)
   Processing by PagesController#contact as HTML
 Completed 200 OK in 32ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('user@example.com')) LIMIT 1
+  [1m[36mAREL (0.8ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt") VALUES ('Example User', 'user@example.com', '2011-05-24 06:33:56.799875', '2011-05-24 06:33:56.799875', '1da57133d94e57b39ff9ba5190b0490cd0a51fe16681229660dce8a99c89bc64', 'e0fe89602a488e7403fdb760c33a3ebc6820e5cf4e427a931f5446aec27ad8b4')[0m
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('user@example.com')) LIMIT 1
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt") VALUES ('Example User', 'user@example.com', '2011-05-24 06:41:49.233111', '2011-05-24 06:41:49.233111', 'b1aaa54d2e5c823f30994a2853b883fce6d5a66c56674d2fb5f08c2da0753807', '8536fb80b8aefdec8a3a5727513fb5c752f7fae7b781d2ee032f5cbd147e9745')[0m
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('user@example.com')) LIMIT 1
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt") VALUES ('Example User', 'user@example.com', '2011-05-24 06:46:03.115938', '2011-05-24 06:46:03.115938', 'c65ea95c743110327ef06d735592f06a9fb13fb62f7bfe6655e0086f88b78db7', 'd0f5085b2e9f599f24ef2efa5e35696d93f96e6ceca3a70cf82e8b9116911657')[0m
