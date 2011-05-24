@@ -5205,3 +5205,190 @@ Completed 200 OK in 106ms (Views: 21.2ms | ActiveRecord: 1.3ms)
  FROM sqlite_master
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-24 14:10:49 +0530
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (56.2ms)
+Rendered pages/home.html.erb within layouts/application (60.2ms)
+Completed   in 64ms
+
+ActionView::Template::Error (undefined local variable or method `root_path' for #<#<Class:0x9116864>:0x9114f8c>):
+    1: <header>
+    2: <%= link_to logo ,root_path
+    3:  %>
+    4: <nav class="round">
+    5: <ul>
+  app/views/layouts/_header.html.erb:2:in `_app_views_layouts__header_html_erb___617189764_73580360__819347558'
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___934153164_76055070__453681473'
+
+Rendered /home/pavan/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /home/pavan/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.8ms)
+Rendered /home/pavan/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-24 14:11:42 +0530
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (1.1ms)
+Rendered layouts/_footer.html.erb (0.8ms)
+Rendered pages/home.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-24 14:11:49 +0530
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (1.1ms)
+Rendered layouts/_footer.html.erb (0.7ms)
+Rendered pages/home.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-24 14:11:52 +0530
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+Rendered layouts/_header.html.erb (1.1ms)
+Rendered layouts/_footer.html.erb (0.7ms)
+Rendered pages/home.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 11ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-24 14:11:57 +0530
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (1.1ms)
+Rendered layouts/_footer.html.erb (0.7ms)
+Rendered pages/home.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-24 14:12:01 +0530
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (1.2ms)
+Rendered layouts/_footer.html.erb (0.7ms)
+Rendered pages/home.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-24 14:12:22 +0530
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (20.5ms)
+Rendered pages/home.html.erb within layouts/application (24.2ms)
+Completed   in 28ms
+
+ActionView::Template::Error (No route matches {:controller=>"pages", :action=>"home"}):
+    1: <header>
+    2: <%= link_to logo ,root_path
+    3:  %>
+    4: <nav class="round">
+    5: <ul>
+  app/views/layouts/_header.html.erb:2:in `_app_views_layouts__header_html_erb__406991237_81135440__997376226'
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb__546559848_81230590_878044809'
+
+Rendered /home/pavan/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /home/pavan/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered /home/pavan/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-24 14:14:37 +0530
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (1.2ms)
+Rendered layouts/_footer.html.erb (0.7ms)
+Rendered pages/home.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 10ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2011-05-24 14:14:45 +0530
+
+ActionController::RoutingError (No route matches "/pages/home"):
+  
+
+Rendered /home/pavan/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-05-24 14:15:05 +0530
+
+ActionController::RoutingError (No route matches "/home"):
+  
+
+Rendered /home/pavan/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-24 14:15:17 +0530
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.8ms)
+Rendered pages/home.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-24 14:19:25 +0530
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (1.1ms)
+Rendered layouts/_footer.html.erb (0.7ms)
+Rendered pages/home.html.erb within layouts/application (31.7ms)
+Completed 200 OK in 36ms (Views: 35.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-05-24 14:19:29 +0530
+  Processing by UsersController#new as HTML
+Rendered layouts/_stylesheets.html.erb (2.6ms)
+Rendered layouts/_header.html.erb (2.5ms)
+Rendered layouts/_footer.html.erb (0.7ms)
+Rendered users/new.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 37ms (Views: 36.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-24 14:20:01 +0530
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (1.2ms)
+Rendered layouts/_footer.html.erb (0.7ms)
+Rendered pages/home.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('pavan@futurenow.biz')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt") VALUES ('pavan', 'pavan@futurenow.biz', '2011-05-24 10:18:20.818720', '2011-05-24 10:18:20.818720', '0ad283286c8eb71e3381e499da9f4e6c3d3cb2618e2a898e7c4e50418c3e6e30', 'c1ded968264c0b32cc24c0e66586eab05da1bc6fc75a1bd83058676eac5a6e38')
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateUsers (20110521045629)
+Migrating to AddEmailUniquenessIndex (20110521072427)
+Migrating to AddPasswordToUsers (20110523133405)
+Migrating to AddSaltToUsers (20110524055837)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m

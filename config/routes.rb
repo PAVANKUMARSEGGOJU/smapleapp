@@ -1,9 +1,9 @@
 Smapleapp::Application.routes.draw do
 resources :users
-get "users/new"
+#get "users/new"
 
-#root :to => "pages#home"
-match '/', :to => 'pages#home'
+root :to => "pages#home"
+#match '/', :to => 'pages#home'
 match '/contact', :to => 'pages#contact'
 match '/about', :to => 'pages#about'
 match '/help', :to => 'pages#help'
