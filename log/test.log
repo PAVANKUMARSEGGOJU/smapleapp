@@ -57,3 +57,5 @@ Completed 200 OK in 32ms (Views: 32.0ms | ActiveRecord: 0.0ms)
   [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt") VALUES ('Example User', 'user@example.com', '2011-05-24 07:07:36.779584', '2011-05-24 07:07:36.779584', 'c9e04c5b21627ef2b3e951daddf50a3cbc8bc594bfa26f62992a82ef51325f5f', '51e86a6b4cab0b2b62e8eb152ea76d691ed3559d5411b3e9ab899f9e7d01ee31')[0m
   [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('user@example.com')) LIMIT 1
   [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt") VALUES ('Example User', 'user@example.com', '2011-05-24 07:07:36.790636', '2011-05-24 07:07:36.790636', 'c9e04c5b21627ef2b3e951daddf50a3cbc8bc594bfa26f62992a82ef51325f5f', '51e86a6b4cab0b2b62e8eb152ea76d691ed3559d5411b3e9ab899f9e7d01ee31')[0m
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "users"
