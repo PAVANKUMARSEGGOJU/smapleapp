@@ -6295,3 +6295,134 @@ Rendered layouts/_header.html.erb (1.0ms)
 Rendered layouts/_footer.html.erb (0.7ms)
 Rendered users/show.html.erb within layouts/application (8.8ms)
 Completed 200 OK in 40ms (Views: 12.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-25 12:36:04 +0530
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (1.1ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Rendered pages/home.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-05-25 12:36:07 +0530
+  Processing by UsersController#new as HTML
+Rendered shared/_error_messages.html.erb (0.6ms)
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (1.0ms)
+Rendered layouts/_footer.html.erb (0.7ms)
+Rendered users/new.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 40ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-05-25 12:36:11 +0530
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0YsMx3chP8e7rYZ6dLoRf+NxatkHRy+9wVjcHRSWTrc=", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('')) LIMIT 1
+Rendered shared/_error_messages.html.erb (8.1ms)
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (1.1ms)
+Rendered layouts/_footer.html.erb (0.7ms)
+Rendered users/new.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 159ms (Views: 23.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-05-25 12:36:38 +0530
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0YsMx3chP8e7rYZ6dLoRf+NxatkHRy+9wVjcHRSWTrc=", "user"=>{"name"=>"abcdefgh", "email"=>"abcdefgh@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('abcdefgh@gmail.com')) LIMIT 1[0m
+Rendered shared/_error_messages.html.erb (2.1ms)
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.7ms)
+Rendered users/new.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 72ms (Views: 18.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-05-25 12:36:55 +0530
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0YsMx3chP8e7rYZ6dLoRf+NxatkHRy+9wVjcHRSWTrc=", "user"=>{"name"=>"abcdefgh", "email"=>"abcdefgh@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('abcdefgh@gmail.com')) LIMIT 1
+Rendered shared/_error_messages.html.erb (2.1ms)
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (1.1ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/new.html.erb within layouts/application (40.5ms)
+Completed 200 OK in 71ms (Views: 44.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-05-25 12:37:11 +0530
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0YsMx3chP8e7rYZ6dLoRf+NxatkHRy+9wVjcHRSWTrc=", "user"=>{"name"=>"abcdefgh", "email"=>"abcdefgh@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('abcdefgh@gmail.com')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt") VALUES ('abcdefgh', 'abcdefgh@gmail.com', '2011-05-25 07:07:11.457506', '2011-05-25 07:07:11.457506', 'da45a0ed7796077d463761cd9590dfedb470f25403f2fa2b913e1b30ef9497a4', '5e337a26463960d1cb166b3301333f49a254208979e350cc2fc5cfa8e4279a75')
+Redirected to http://localhost:3000/users/10
+Completed 302 Found in 507ms
+
+
+Started GET "/users/10" for 127.0.0.1 at 2011-05-25 12:37:11 +0530
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (1.0ms)
+Rendered layouts/_footer.html.erb (0.7ms)
+Rendered users/show.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 70ms (Views: 12.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-25 12:40:03 +0530
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (1.0ms)
+Rendered layouts/_footer.html.erb (0.8ms)
+Rendered pages/home.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-05-25 12:40:05 +0530
+  Processing by UsersController#new as HTML
+Rendered shared/_error_messages.html.erb (0.6ms)
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+Rendered layouts/_header.html.erb (1.5ms)
+Rendered layouts/_footer.html.erb (0.7ms)
+Rendered users/new.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 67ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-05-25 12:40:23 +0530
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0YsMx3chP8e7rYZ6dLoRf+NxatkHRy+9wVjcHRSWTrc=", "user"=>{"name"=>"abdsksad", "email"=>"adslkfaskl", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('adslkfaskl')) LIMIT 1
+Rendered shared/_error_messages.html.erb (2.0ms)
+Rendered layouts/_stylesheets.html.erb (1.6ms)
+Rendered layouts/_header.html.erb (1.2ms)
+Rendered layouts/_footer.html.erb (0.7ms)
+Rendered users/new.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 46ms (Views: 18.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-05-25 12:40:36 +0530
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0YsMx3chP8e7rYZ6dLoRf+NxatkHRy+9wVjcHRSWTrc=", "user"=>{"name"=>"abdsksad", "email"=>"adslkfaskl@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('adslkfaskl@gmail.com')) LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt") VALUES ('abdsksad', 'adslkfaskl@gmail.com', '2011-05-25 07:10:36.459514', '2011-05-25 07:10:36.459514', '00e086680bd3d25f43549a24dbb4bc4de4bf58108bb8ecdbe5ed9dd0d4dd4249', '506ca8458e1c1cc07dfff5eb0bf8a08bac2afea94064af32254d7fcd29329339')
+Redirected to http://localhost:3000/users/11
+Completed 302 Found in 210ms
+
+
+Started GET "/users/11" for 127.0.0.1 at 2011-05-25 12:40:36 +0530
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (1.1ms)
+Rendered layouts/_footer.html.erb (0.7ms)
+Rendered users/show.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 65ms (Views: 12.1ms | ActiveRecord: 0.7ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
