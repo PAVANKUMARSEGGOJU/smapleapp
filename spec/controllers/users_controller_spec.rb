@@ -42,6 +42,12 @@ require 'spec_helper'
 			post :create, :user => @attr
 			response.should redirect_to(user_path(assigns(:user)))
 			end
+
+			it "should have a welcome message" do
+			post :create, :user => @attr
+			flash[:success].should = ̃ /welcome to the sample app/i
+			end
+
 		end
 
 
