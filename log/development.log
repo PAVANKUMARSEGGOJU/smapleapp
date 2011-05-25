@@ -5531,3 +5531,436 @@ WARNING: Can't mass-assign protected attributes: password_confirm
 [0m
   [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('abcbbc.abcbbc@gmail.com')) LIMIT 1
   [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt") VALUES ('pavanPeterEngland', 'abcbbc.abcbbc@gmail.com', '2011-05-24 13:03:32.507575', '2011-05-24 13:03:32.507575', '65316b4c5b2b7d73bebaf2ee7583317b76b4a18f2b7e003bdeccdf9e1cf5fe4e', 'd99d003b26cd5a92c5c351114c912743e90ee872350c9e50fd21915196ca207f')[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateUsers (20110521045629)
+Migrating to AddEmailUniquenessIndex (20110521072427)
+Migrating to AddPasswordToUsers (20110523133405)
+Migrating to AddSaltToUsers (20110524055837)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-24 18:34:36 +0530
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (1.1ms)
+Rendered layouts/_footer.html.erb (0.7ms)
+Rendered pages/home.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2011-05-24 18:34:44 +0530
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (1.1ms)
+Rendered layouts/_footer.html.erb (0.7ms)
+Rendered users/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 60ms (Views: 11.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2011-05-24 18:38:24 +0530
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (1.1ms)
+Rendered layouts/_footer.html.erb (0.8ms)
+Rendered users/show.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 36ms (Views: 12.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2011-05-24 18:38:50 +0530
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (1.0ms)
+Rendered layouts/_footer.html.erb (0.7ms)
+Rendered users/show.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 33ms (Views: 11.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2011-05-24 18:38:56 +0530
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (1.1ms)
+Rendered layouts/_footer.html.erb (0.7ms)
+Rendered users/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 59ms (Views: 11.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2011-05-24 18:40:12 +0530
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+Rendered layouts/_header.html.erb (1.1ms)
+Rendered layouts/_footer.html.erb (0.7ms)
+Rendered users/show.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 90ms (Views: 13.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2011-05-24 19:08:57 +0530
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (1.0ms)
+Rendered layouts/_footer.html.erb (0.8ms)
+Rendered users/show.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 34ms (Views: 11.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-05-24 19:09:18 +0530
+
+ActionController::RoutingError (No route matches "/home"):
+  
+
+Rendered autotest/ruby/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2011-05-24 19:09:30 +0530
+
+ActionController::RoutingError (No route matches "/pages/home"):
+  
+
+Rendered autotest/ruby/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/users/home" for 127.0.0.1 at 2011-05-24 19:09:46 +0530
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"home"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
+Completed   in 16ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=home):
+  app/controllers/users_controller.rb:4:in `show'
+
+Rendered autotest/ruby/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered autotest/ruby/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered autotest/ruby/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-24 19:09:54 +0530
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+Rendered layouts/_header.html.erb (1.1ms)
+Rendered layouts/_footer.html.erb (0.7ms)
+Rendered pages/home.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-05-24 19:09:59 +0530
+  Processing by UsersController#new as HTML
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (1.1ms)
+Rendered layouts/_footer.html.erb (0.7ms)
+Rendered users/new.html.erb within layouts/application (42.6ms)
+Completed 200 OK in 61ms (Views: 46.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-24 19:10:17 +0530
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (1.1ms)
+Rendered layouts/_footer.html.erb (0.7ms)
+Rendered pages/home.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-05-24 19:10:35 +0530
+  Processing by UsersController#new as HTML
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (1.1ms)
+Rendered layouts/_footer.html.erb (25.8ms)
+Rendered users/new.html.erb within layouts/application (40.6ms)
+Completed 200 OK in 58ms (Views: 44.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-25 10:41:13 +0530
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (2.6ms)
+Rendered layouts/_header.html.erb (20.6ms)
+Rendered layouts/_footer.html.erb (1.7ms)
+Rendered pages/home.html.erb within layouts/application (32.4ms)
+Completed 200 OK in 57ms (Views: 56.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-05-25 10:41:18 +0530
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (40.7ms)
+Completed   in 85ms
+
+ActionView::Template::Error (Missing partial shared/error_messages with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/home/pavan/rails_projects/smapleapp/app/views"):
+    1: <h1>Sign up</h1>
+    2: <%= form_for(@user) do |f| %>
+    3: <%= render 'shared/error_messages' %>
+    4: 
+    5: <div class="field">
+    6: <%= f.label :name %><br />
+  app/views/users/new.html.erb:3:in `block in _app_views_users_new_html_erb___300418033_78612870__373540043'
+  app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb___300418033_78612870__373540043'
+
+Rendered autotest/ruby/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered autotest/ruby/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.8ms)
+Rendered autotest/ruby/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (19.5ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-05-25 10:42:35 +0530
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (7.4ms)
+Completed   in 49ms
+
+ActionView::Template::Error (Missing partial shared/error_messages with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/home/pavan/rails_projects/smapleapp/app/views"):
+    1: <h1>Sign up</h1>
+    2: <%= form_for(@user) do |f| %>
+    3: <%= render 'shared/error_messages' %>
+    4: 
+    5: <div class="field">
+    6: <%= f.label :name %><br />
+  app/views/users/new.html.erb:3:in `block in _app_views_users_new_html_erb___300418033_78915980__373540043'
+  app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb___300418033_78915980__373540043'
+
+Rendered autotest/ruby/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered autotest/ruby/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.1ms)
+Rendered autotest/ruby/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.2ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-05-25 10:42:38 +0530
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (7.1ms)
+Completed   in 25ms
+
+ActionView::Template::Error (Missing partial shared/error_messages with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/home/pavan/rails_projects/smapleapp/app/views"):
+    1: <h1>Sign up</h1>
+    2: <%= form_for(@user) do |f| %>
+    3: <%= render 'shared/error_messages' %>
+    4: 
+    5: <div class="field">
+    6: <%= f.label :name %><br />
+  app/views/users/new.html.erb:3:in `block in _app_views_users_new_html_erb___300418033_78052990__373540043'
+  app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb___300418033_78052990__373540043'
+
+Rendered autotest/ruby/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered autotest/ruby/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (26.5ms)
+Rendered autotest/ruby/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (32.2ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-05-25 10:42:39 +0530
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (7.3ms)
+Completed   in 26ms
+
+ActionView::Template::Error (Missing partial shared/error_messages with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/home/pavan/rails_projects/smapleapp/app/views"):
+    1: <h1>Sign up</h1>
+    2: <%= form_for(@user) do |f| %>
+    3: <%= render 'shared/error_messages' %>
+    4: 
+    5: <div class="field">
+    6: <%= f.label :name %><br />
+  app/views/users/new.html.erb:3:in `block in _app_views_users_new_html_erb___300418033_78501160__373540043'
+  app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb___300418033_78501160__373540043'
+
+Rendered autotest/ruby/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered autotest/ruby/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.1ms)
+Rendered autotest/ruby/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.1ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-05-25 10:42:39 +0530
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (7.5ms)
+Completed   in 50ms
+
+ActionView::Template::Error (Missing partial shared/error_messages with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/home/pavan/rails_projects/smapleapp/app/views"):
+    1: <h1>Sign up</h1>
+    2: <%= form_for(@user) do |f| %>
+    3: <%= render 'shared/error_messages' %>
+    4: 
+    5: <div class="field">
+    6: <%= f.label :name %><br />
+  app/views/users/new.html.erb:3:in `block in _app_views_users_new_html_erb___300418033_78665820__373540043'
+  app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb___300418033_78665820__373540043'
+
+Rendered autotest/ruby/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered autotest/ruby/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.6ms)
+Rendered autotest/ruby/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.7ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-05-25 10:42:39 +0530
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (7.2ms)
+Completed   in 25ms
+
+ActionView::Template::Error (Missing partial shared/error_messages with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/home/pavan/rails_projects/smapleapp/app/views"):
+    1: <h1>Sign up</h1>
+    2: <%= form_for(@user) do |f| %>
+    3: <%= render 'shared/error_messages' %>
+    4: 
+    5: <div class="field">
+    6: <%= f.label :name %><br />
+  app/views/users/new.html.erb:3:in `block in _app_views_users_new_html_erb___300418033_78076370__373540043'
+  app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb___300418033_78076370__373540043'
+
+Rendered autotest/ruby/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered autotest/ruby/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (26.9ms)
+Rendered autotest/ruby/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (32.2ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-05-25 10:42:39 +0530
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (7.4ms)
+Completed   in 26ms
+
+ActionView::Template::Error (Missing partial shared/error_messages with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/home/pavan/rails_projects/smapleapp/app/views"):
+    1: <h1>Sign up</h1>
+    2: <%= form_for(@user) do |f| %>
+    3: <%= render 'shared/error_messages' %>
+    4: 
+    5: <div class="field">
+    6: <%= f.label :name %><br />
+  app/views/users/new.html.erb:3:in `block in _app_views_users_new_html_erb___300418033_78501380__373540043'
+  app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb___300418033_78501380__373540043'
+
+Rendered autotest/ruby/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered autotest/ruby/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.1ms)
+Rendered autotest/ruby/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.3ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-05-25 10:42:39 +0530
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (7.7ms)
+Completed   in 51ms
+
+ActionView::Template::Error (Missing partial shared/error_messages with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/home/pavan/rails_projects/smapleapp/app/views"):
+    1: <h1>Sign up</h1>
+    2: <%= form_for(@user) do |f| %>
+    3: <%= render 'shared/error_messages' %>
+    4: 
+    5: <div class="field">
+    6: <%= f.label :name %><br />
+  app/views/users/new.html.erb:3:in `block in _app_views_users_new_html_erb___300418033_78842150__373540043'
+  app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb___300418033_78842150__373540043'
+
+Rendered autotest/ruby/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered autotest/ruby/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.1ms)
+Rendered autotest/ruby/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.4ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-05-25 10:42:40 +0530
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (7.2ms)
+Completed   in 25ms
+
+ActionView::Template::Error (Missing partial shared/error_messages with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/home/pavan/rails_projects/smapleapp/app/views"):
+    1: <h1>Sign up</h1>
+    2: <%= form_for(@user) do |f| %>
+    3: <%= render 'shared/error_messages' %>
+    4: 
+    5: <div class="field">
+    6: <%= f.label :name %><br />
+  app/views/users/new.html.erb:3:in `block in _app_views_users_new_html_erb___300418033_78054530__373540043'
+  app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb___300418033_78054530__373540043'
+
+Rendered autotest/ruby/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered autotest/ruby/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (26.5ms)
+Rendered autotest/ruby/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (31.8ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-05-25 10:42:40 +0530
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (7.5ms)
+Completed   in 26ms
+
+ActionView::Template::Error (Missing partial shared/error_messages with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/home/pavan/rails_projects/smapleapp/app/views"):
+    1: <h1>Sign up</h1>
+    2: <%= form_for(@user) do |f| %>
+    3: <%= render 'shared/error_messages' %>
+    4: 
+    5: <div class="field">
+    6: <%= f.label :name %><br />
+  app/views/users/new.html.erb:3:in `block in _app_views_users_new_html_erb___300418033_78500270__373540043'
+  app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb___300418033_78500270__373540043'
+
+Rendered autotest/ruby/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered autotest/ruby/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.1ms)
+Rendered autotest/ruby/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-25 10:50:57 +0530
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (1.1ms)
+Rendered layouts/_footer.html.erb (0.7ms)
+Rendered pages/home.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-05-25 10:51:00 +0530
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (7.4ms)
+Completed   in 26ms
+
+ActionView::Template::Error (Missing partial shared/error_messages with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/home/pavan/rails_projects/smapleapp/app/views"):
+    1: <h1>Sign up</h1>
+    2: <%= form_for(@user) do |f| %>
+    3: <%= render 'shared/error_messages' %>
+    4: 
+    5: <div class="field">
+    6: <%= f.label :name %><br />
+  app/views/users/new.html.erb:3:in `block in _app_views_users_new_html_erb___300418033_78565120__373540043'
+  app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb___300418033_78565120__373540043'
+
+Rendered autotest/ruby/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered autotest/ruby/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.1ms)
+Rendered autotest/ruby/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.1ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-05-25 10:56:17 +0530
+  Processing by UsersController#new as HTML
+Rendered shared/_error_messages.html.erb (0.6ms)
+Rendered layouts/_stylesheets.html.erb (2.0ms)
+Rendered layouts/_header.html.erb (1.5ms)
+Rendered layouts/_footer.html.erb (0.7ms)
+Rendered users/new.html.erb within layouts/application (95.7ms)
+Completed 200 OK in 138ms (Views: 123.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-05-25 10:56:52 +0530
+
+AbstractController::ActionNotFound (The action 'create' could not be found for UsersController):
+  
+
+Rendered autotest/ruby/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (1.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-05-25 10:57:10 +0530
+
+AbstractController::ActionNotFound (The action 'create' could not be found for UsersController):
+  
+
+Rendered autotest/ruby/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.8ms)
